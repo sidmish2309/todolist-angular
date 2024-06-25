@@ -1,0 +1,59 @@
+
+    
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; /* Ensures cards wrap to next line when needed */
+        justify-content: center; /* Centers cards horizontally */
+    }
+    
+    
+    .single-card {
+        justify-content: space-evenly;
+        height: 200px;
+        color:white;
+        margin:10px 10px 10px 10px;
+    
+        background-color: #2c3e50; 
+        transition:0.1s;   /*  To see hover effect  */
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        padding: 20px;
+        width: 284px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        overflow: hidden;
+    }
+    
+    .btn{
+    border: 2px solid black;
+    width: 98px;
+    height: 40px;
+    margin-left: 3px;
+    background-color: lightseagreen;
+    }
+    
+    
+    
+      .wrapper{
+        justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+    .btn-red{
+            background-color: rgb(243, 95, 95);
+    }
+
+    .btn-edit{
+        background-color: yellow;
+    }
+      
+
+      
+    

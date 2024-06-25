@@ -1,0 +1,36 @@
+<div class="button-container">
+    <button class="btn" (click)="toggleFormVisibility()">Add Tasks</button>
+</div>
+  
+  <div *ngIf="isFormVisible" class="singleform">
+    <section class="container">
+        <header>Todo List Tasks</header>
+      
+        <form class="form" [formGroup]="taskForm" (ngSubmit)="addTask()">
+          <div class="column">
+
+            <div class="input-box">
+              <input type="text" placeholder="Task" formControlName="name"/>
+              <small *ngIf="taskForm.get('name').invalid && taskForm.get('name').touched">*Task is a Required field</small>
+            </div>
+
+            <div class="input-box">
+              <input type="text" placeholder="Description" formControlName="description"/>
+              <small *ngIf="taskForm.get('description').invalid && taskForm.get('description').touched">*Description is a Required field</small>
+            </div>
+          </div>    
+      
+          <div class="input-box">
+            <input type="text" placeholder="Priority" formControlName="priority"/>
+            <small *ngIf="taskForm.get('priority').invalid && taskForm.get('priority').touched">*Priority is a Required field</small>
+          </div>
+
+          <input type="submit" value="Submit" class="submit-btn"> 
+          <!-- [disabled]="!reactiveForm.valid" -->
+        </form>
+      </section>
+      
+  </div>
+
+  
+  

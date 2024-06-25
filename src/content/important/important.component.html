@@ -1,0 +1,17 @@
+
+<div class="wrapper">
+    @for (task of importantTask; track $index) {
+        <div class="product-card">
+            <div id="single-card" class="single-card"  setBackground>
+              <p class="pname">Name: {{ task.value.name }}</p>
+              <p class="pcolor">Description: {{ task.value.description }}</p>
+              <p class="pprice">Priority: {{ task.value.priority }}</p>
+            </div>
+    
+            <div class="cart-controls" >
+                <button class="btn btn-red">Delete</button>
+                <button class="btn">Completed</button>
+            </div>
+        </div>
+      }
+</div>

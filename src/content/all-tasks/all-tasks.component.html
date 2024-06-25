@@ -1,0 +1,20 @@
+
+<app-updateform [visible]="visibleUpdate" [currForm]="updateForm"></app-updateform>
+<div class="wrapper">
+    @for (task of allTasks; track task; let i=$index) {
+        <div class="product-card">
+            <div id="single-card" class="single-card"  setBackground>
+              <p class="pname">Name: {{ task.value.name }}</p>
+              <p class="pcolor">Description: {{ task.value.description }}</p>
+              <p class="pprice">Priority: {{ task.value.priority }}</p>
+            </div>
+    
+            <div class="cart-controls" >
+                <button class="btn btn-edit" (click)="toggleUpdate($index)">Edit</button>
+                <button class="btn btn-red" (click)="Delete(i)">Delete</button>
+                <button class="btn" (click)="Complete(i)">Complete</button>
+            </div>
+        </div>
+      }
+</div>
+

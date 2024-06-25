@@ -1,0 +1,33 @@
+
+<div *ngIf="visible" class="singleform">
+    <section class="container">
+        <header>Update List Tasks</header>
+      
+        <form class="form" [formGroup]="currForm" >
+          <div class="column">
+
+            <div class="input-box">
+              <input type="text" placeholder="Task" formControlName="name"/>
+              <small *ngIf="currForm.get('name').invalid && taskForm.get('name').touched">*Task is a Required field</small>
+            </div>
+
+            <div class="input-box">
+              <input type="text" placeholder="Description" formControlName="description"/>
+              <small *ngIf="currForm.get('description').invalid && taskForm.get('description').touched">*Description is a Required field</small>
+            </div>
+          </div>    
+      
+          <div class="input-box">
+            <input type="text" placeholder="Priority" formControlName="priority"/>
+            <small *ngIf="currForm.get('priority').invalid && taskForm.get('priority').touched">*Priority is a Required field</small>
+          </div>
+
+          <input type="submit" value="update" class="submit-btn" (click)="toggleVisibility()"> 
+          <!-- [disabled]="!reactiveForm.valid" -->
+        </form>
+      </section>
+      
+  </div>
+
+  
+  

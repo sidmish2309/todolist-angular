@@ -1,0 +1,10 @@
+.head {
+    position: sticky;
+    top: 0;
+    /* margin-top: 28px; */
+    background-color: #000000;
+    color: white;
+    padding: 1em 0;
+    text-align: center;  
+}
+
